@@ -12,22 +12,35 @@ function OptanonWrapper() { }
 
 </script>
   <body>
-<!-- OneTrust Privacy Notice start -->
-  <!-- Container in which the privacy notice will be rendered -->
-  <div id="otnotice-5a9ccf2e-1456-4ab2-9231-c282c8e3fd71" class="otnotice"></div>
-  
-  <script src="https://privacyportal-staging-cdn.1trust.ninja/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-      settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1zdGFnaW5nLjF0cnVzdC5uaW5qYS9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0="
-    </script>
-  
-  <script type="text/javascript" charset="UTF-8">
-      // To ensure external settings are loaded, use the Initialized promise:
-      OneTrust.NoticeApi.Initialized.then(function() {
-        OneTrust.NoticeApi.LoadNotices(["https://privacyportal-staging-cdn.1trust.ninja/8093b6bf-26d0-4ce2-b807-5280c53fb53a/privacy-notices/5a9ccf2e-1456-4ab2-9231-c282c8e3fd71.json"]);
-      });
-    </script>
-    
-  <!-- OneTrust Privacy Notice end -->
+<!-- OneTrust Privacy Notice Bundle start -->
+
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="f1Dropdown"></select>
+<select id="f2Dropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
+
+<script src="https://privacyportal-staging-cdn.1trust.ninja/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1zdGFnaW5nLjF0cnVzdC5uaW5qYS9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
+    bundleUrl="https://privacyportal-staging-cdn.1trust.ninja/8093b6bf-26d0-4ce2-b807-5280c53fb53a/notice-bundles/draft/e9413453-b93b-48ac-bb8e-04cc9eb29086.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["f1Dropdown", "f2Dropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
   </body>
 </html>
  
