@@ -11,8 +11,8 @@
 <!-- OneTrust Privacy Notice Bundle start -->
 
 <!-- Drop-down elements that will control which notice is displayed -->
-<select id="filter2_undefinedDropdown"></select>
-<select id="filter3_undefinedDropdown"></select>
+<select id="filter2 edit_undefinedDropdown"></select>
+<select id="filter3 edit_undefinedDropdown"></select>
 
 <!-- Button element that will trigger the notice update -->
 <button id="otnotice-bundle-button">Update</button>
@@ -30,7 +30,7 @@
     OneTrust.NoticeManagerApi.Initialized.then(function() {
         OneTrust.NoticeManagerApi.InitializeOptions(
             "otnotice-bundle-container",
-            ["filter2_undefinedDropdown", "filter3_undefinedDropdown"],
+            ["filter2 edit_undefinedDropdown", "filter3 edit_undefinedDropdown"],
             "otnotice-bundle-button"
         );
     });
