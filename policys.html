@@ -12,7 +12,6 @@
 
 <!-- Drop-down elements that will control which notice is displayed -->
 <select id="f1e_undefinedDropdown"></select>
-<select id="f2e_undefinedDropdown"></select>
 
 <!-- Button element that will trigger the notice update -->
 <button id="otnotice-bundle-button">Update</button>
@@ -23,14 +22,14 @@
 
 <script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
     settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
-    bundleUrl="https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/notice-bundles/draft/8ad8c3ce-0842-4dd4-9b85-a9f5cfa966e1.json";
+    bundleUrl="https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/notice-bundles/297e08c2-0771-46d9-923a-4f093f67415c.json";
 </script>
 
 <script type="text/javascript" charset="UTF-8">
     OneTrust.NoticeManagerApi.Initialized.then(function() {
         OneTrust.NoticeManagerApi.InitializeOptions(
             "otnotice-bundle-container",
-            ["f1e_undefinedDropdown", "f2e_undefinedDropdown"],
+            ["f1e_undefinedDropdown"],
             "otnotice-bundle-button"
         );
     });
