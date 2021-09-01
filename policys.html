@@ -3,41 +3,33 @@
   <head>
     <title>Privacy Notice Page(bundle)</title>
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
- <script src="https://cookie-cdn.1trust.app/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="14409bda-0056-43f2-964d-c8cb8c2d0908" ></script>
+ <script src="https://cookie-cdn.1trust.app/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="5d3e2c2e-9b73-4957-9675-474ad25e37f6" ></script>
 
  </head>
 
 
   <body>
-<!-- OneTrust Privacy Notice Bundle start -->
-
-<!-- Drop-down elements that will control which notice is displayed -->
-<select id="policyDropdown"></select>
-<select id="policy34Dropdown"></select>
-
-<!-- Button element that will trigger the notice update -->
-<button id="otnotice-bundle-button">Update</button>
-
-
-<!-- Container in which the privacy notices will be rendered -->
-<div id="otnotice-bundle-container" class="otnotice"></div>
-
-<script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
-    bundleUrl="https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/notice-bundles/draft/ab66d2c8-4720-4d01-a265-01d36f5bad65.json";
-</script>
-
-<script type="text/javascript" charset="UTF-8">
-    OneTrust.NoticeManagerApi.Initialized.then(function() {
-        OneTrust.NoticeManagerApi.InitializeOptions(
-            "otnotice-bundle-container",
-            ["policyDropdown", "policy34Dropdown"],
-            "otnotice-bundle-button"
-        );
-    });
-</script>
-
-<!-- OneTrust Privacy Notice end -->
+<!-- OneTrust Privacy Notice start -->
+  <!-- Language Drop-down elements that will control in which language notice is displayed -->
+  <div class="otnotice-language-dropdown-container">
+    <select id="otnotice-language-dropdown" aria-label="language selector"></select>
+  </div>
+    
+  <!-- Container in which the privacy notice will be rendered -->
+  <div id="otnotice-5262f656-617a-4136-a3eb-f3239600d89c" class="otnotice"></div>
+  
+  <script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+      settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0="
+    </script>
+  
+  <script type="text/javascript" charset="UTF-8">
+      // To ensure external settings are loaded, use the Initialized promise:
+      OneTrust.NoticeApi.Initialized.then(function() {
+        OneTrust.NoticeApi.LoadNotices(["https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/privacy-notices/5262f656-617a-4136-a3eb-f3239600d89c.json"]);
+      });
+    </script>
+    
+  <!-- OneTrust Privacy Notice end -->
   </body>
 </html>
  
