@@ -11,7 +11,8 @@
 <!-- OneTrust Privacy Notice Bundle start -->
 
 <!-- Drop-down elements that will control which notice is displayed -->
-<select id="filter1_random_id_undefinedDropdown"></select>
+<select id="f1_undefinedDropdown"></select>
+<select id="f2_undefinedDropdown"></select>
 
 <!-- Button element that will trigger the notice update -->
 <button id="otnotice-bundle-button">Update</button>
@@ -22,14 +23,14 @@
 
 <script src="https://qa-ds-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
     settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
-    bundleUrl="https://qa-ds-cdn.1trust.app/d8a968c8-0b2a-4182-a743-a0e88f0a5500/notice-bundles/0ef6aafc-7718-449d-859f-a074baffa30e.json";
+    bundleUrl="https://qa-ds-cdn.1trust.app/3f8d47f7-53eb-4af0-bab2-0eedf9e3eb9c/notice-bundles/draft/f924f562-bd7a-46f8-9aea-6919ffcee97e.json";
 </script>
 
 <script type="text/javascript" charset="UTF-8">
     OneTrust.NoticeManagerApi.Initialized.then(function() {
         OneTrust.NoticeManagerApi.InitializeOptions(
             "otnotice-bundle-container",
-            ["filter1_random_id_undefinedDropdown"],
+            ["f1_undefinedDropdown", "f2_undefinedDropdown"],
             "otnotice-bundle-button"
         );
     });
