@@ -1,27 +1,35 @@
 <html>
   <body>
     <script src="https://cookie-cdn.1trust.app/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="14409bda-0056-43f2-964d-c8cb8c2d0908" ></script>
-<!-- OneTrust Privacy Notice start -->
-  <!-- Language Drop-down elements that will control in which language notice is displayed -->
-  <div class="otnotice-language-dropdown-container">
-    <select id="otnotice-language-dropdown" aria-label="language selector"></select>
-  </div>
-    
-  <!-- Container in which the privacy notice will be rendered -->
-  <div id="otnotice-8b622495-1f7c-4475-89d3-827904c344ce" class="otnotice"></div>
-  
-  <script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-      settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0="
-    </script>
-  
-  <script type="text/javascript" charset="UTF-8">
-      // To ensure external settings are loaded, use the Initialized promise:
-      OneTrust.NoticeApi.Initialized.then(function() {
-        OneTrust.NoticeApi.LoadNotices(["https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/privacy-notices/8b622495-1f7c-4475-89d3-827904c344ce.json"]);
-      });
-    </script>
-    
-  <!-- OneTrust Privacy Notice end -->
+<!-- OneTrust Privacy Notice Bundle start -->
+
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="f1_undefinedDropdown"></select>
+<select id="f2_undefinedDropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
+
+<script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
+    bundleUrl="https://lkgb-portal-cdn.1trust.app/0cb50c9e-a16a-443f-a2b3-5345c63d7d34/notice-bundles/draft/a83ca800-a6a1-42bc-9903-94300d5fafae.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["f1_undefinedDropdown", "f2_undefinedDropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
     
   </body>
 </html>
