@@ -1,34 +1,27 @@
 <html>
   <body>
     <script src="https://cookie-cdn.1trust.app/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="14409bda-0056-43f2-964d-c8cb8c2d0908" ></script>
-<!-- OneTrust Privacy Notice Bundle start -->
+<!-- OneTrust Web Policy start -->
+  <!-- Language Drop-down element that will control in which language the Web Policy is displayed -->
+  <div class="otnotice-language-dropdown-container">
+    <select id="otnotice-language-dropdown" aria-label="language selector"></select>
+  </div>
+    
+  <!-- Container in which the Web Policy will be rendered -->
+  <div id="otnotice-237c798f-2ac1-465e-975f-ec0f41c20583" class="otnotice"></div>
 
-<!-- Drop-down elements that will control which notice is displayed -->
-<select id="filter1_random_id_undefinedDropdown"></select>
+  <script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+      settings="eyJjb250ZW50QXBpVXJsIjoiaHR0cHM6Ly9sa2diLXBvcnRhbC4xdHJ1c3QuYXBwL3JlcXVlc3QvdjEvZW50ZXJwcmlzZXBvbGljeS93ZWJwb2xpY3kvY29udGVudCIsIm1ldGFkYXRhQXBpVXJsIjoiaHR0cHM6Ly9sa2diLXBvcnRhbC4xdHJ1c3QuYXBwL3JlcXVlc3QvdjEvZW50ZXJwcmlzZXBvbGljeS93ZWJwb2xpY3kvbWV0YS1kYXRhIn0="
+    </script>
 
-<!-- Button element that will trigger the notice update -->
-<button id="otnotice-bundle-button">Update</button>
+  <script type="text/javascript" charset="UTF-8">
+      // To ensure external settings are loaded, use the Initialized promise:
+      OneTrust.NoticeApi.Initialized.then(function() {
+        OneTrust.NoticeApi.LoadNotices(["https://lkgb-portal-cdn.1trust.app/storage-container/bed7d43b-dc60-4811-85af-b6b718db359d/web-policies/237c798f-2ac1-465e-975f-ec0f41c20583/draft/webpolicy.json"]);
+      });
+    </script>
 
-
-<!-- Container in which the privacy notices will be rendered -->
-<div id="otnotice-bundle-container" class="otnotice"></div>
-
-<script src="https://qa-ds-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
-    bundleUrl="https://qa-ds-cdn.1trust.app/df46630c-09b3-45b3-a9b0-8297608e9159/notice-bundles/e6ac043a-939e-42ca-92cd-4a6c28cdb69d.json";
-</script>
-
-<script type="text/javascript" charset="UTF-8">
-    OneTrust.NoticeManagerApi.Initialized.then(function() {
-        OneTrust.NoticeManagerApi.InitializeOptions(
-            "otnotice-bundle-container",
-            ["filter1_random_id_undefinedDropdown"],
-            "otnotice-bundle-button"
-        );
-    });
-</script>
-
-<!-- OneTrust Privacy Notice end -->
+  <!-- OneTrust Web Policy end -->
     
   </body>
 </html>
